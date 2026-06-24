@@ -156,6 +156,21 @@ nav{
     overflow: hidden;
     box-shadow: 0 18px 16px rgba(1, 1, 1, 0.173);
     margin-bottom: 28px;
+    animation: animate-profile-picture 800ms 200ms backwards ease;
+}
+
+@keyframes animate-profile-picture{
+    0%{
+        transform:scale(0)
+    }
+
+    80%{
+        transform: scale(1.1);
+    }
+
+    100%{
+        transform: scale(1);
+    }
 }
 
 .about-me__picture {
@@ -168,11 +183,13 @@ nav{
 
 .about-me__info--title{
     margin-bottom: 16px;
+    animation: fade-up 650ms 400ms backwards;
 }
 
 .about-me__info--para{
     font-size: 20px;
     margin-bottom: 28px;
+    animation: fade-up 650ms 600ms backwards;
 }
 
 .about-me__link{
@@ -181,8 +198,27 @@ nav{
     color: #438de7;
 }
 
+.about-me__link:hover{
+    color:#2c65aa;
+}
+
 .about-me__link:active{
-    color: rgb(253, 101, 0);
+    color: rgb(255, 97, 69);
+}
+
+.about-me__links{
+    animation: fade-up 650ms 800ms backwards;
+}
+
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .about-me__img--container{
@@ -317,7 +353,16 @@ nav{
 .project__description--link{
     font-size: 20px;
     margin-right: 16px;
+    transition: opacity 300ms ease;
 }
+.project__description--link:hover{
+    opacity: 0.7;
+}
+.project__description--link:active{
+    color: #5ca6ff;
+    opacity: 0.7;
+}
+
 
 .project__description--title,
 .project__description--sub-title,
